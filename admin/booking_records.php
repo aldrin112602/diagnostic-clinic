@@ -277,7 +277,7 @@
                     <!-- content -->
 
                     <?php
-                    $sql = "SELECT accounts.username, accounts.role, accounts.fullname, accounts.address, accounts.email, accounts.contact, booking.services, booking.date, booking.id FROM accounts LEFT JOIN booking ON accounts.username = booking.username WHERE accounts.role = 'user'";
+                    $sql = "SELECT accounts.username, accounts.role, accounts.fullname, accounts.address, accounts.email, accounts.contact, booking.services, booking.service_type, booking.date, booking.id FROM accounts LEFT JOIN booking ON accounts.username = booking.username WHERE accounts.role = 'user'";
                     $result = mysqli_query($conn, $sql);
                     ?>
                     <table class="table table-striped table-hover">
@@ -289,6 +289,7 @@
                                 <th scope="col">Fullname</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Contact</th>
+                                <th scope="col">Service type</th>
                                 <th scope="col">Services</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">Action</th>
@@ -305,6 +306,7 @@
                                     <td>{$row['fullname']}</td>
                                     <td>{$row['email']}</td>
                                     <td>{$row['contact']}</td>
+                                    <td>{$row['service_type']}</td>
                                     <td>{$row['services']}</td>
                                     <td>{$row['date']}</td>
                                     <td>

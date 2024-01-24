@@ -31,3 +31,5 @@
 [ 2024-01-24 2:42:51 PM ][ user123 ] -> Logged in successfully.
 [ 2024-01-24 4:46:50 PM ][ user123 ] -> User logged out successfully.
 [ 2024-01-24 6:11:25 PM ][ user123 ] -> Logged in successfully.
+[ 2024-01-24 6:38:29 PM ][ user123 ] -> User logged out successfully.
+[ 2024-01-24 6:39:10 PM ][ aldrin123 ] -> Logged in successfully.

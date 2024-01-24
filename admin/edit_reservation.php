@@ -129,8 +129,8 @@
                                     Booking records
                                 </a>
                             </li>
-                             
-                              
+
+
                             <li class="nav-item my-1">
                                 <a href="setting.php"
                                     class="text-center text-white d-flex align-items-center justify-content-start gap-2 ml-4 fs-6">
@@ -300,36 +300,29 @@
 
                         <div class="my-2 col-12 PX-0">
                             <small class="form-label fs-6 text-light" for="">Date</small>
-                            <input value="<?php echo $data[0]['date'] ?? null ?>" autocomplete="off" required
-                                class="form-control form-control-md" type="date" name="date">
+                            <input id="date" value="<?php echo $data[0]['date'] ?? null ?>" autocomplete="off" required
+                                class="form-control form-control-md" type="date">
+                            <input value="<?php echo $data[0]['date'] ?? null ?>" type="hidden" name="date">
+                            <input value="<?php echo $data[0]['date'] ?? null ?>" id="updated_date" type="hidden" name="updated_date">
                         </div>
 
-                        <div class="my-2 col-12 PX-0">
-                            <small class="form-label fs-6 text-light" for="">Services</small>
-                            <select class="form-select" name="services" id="services" required>
-                                <option value="OBY" <?= $data[0]['services'] == 'OBY' ? 'selected' : null ?>>OBY</option>
-                                <option value="Laboratory" <?= $data[0]['services'] == 'Laboratory' ? 'selected' : null ?>>
-                                    Laboratory</option>
-                                <option value="Pedia" <?= $data[0]['services'] == 'Pedia' ? 'selected' : null ?>>Pedia
-                                </option>
-                                <option value="Swab" <?= $data[0]['services'] == 'Swab' ? 'selected' : null ?>>Swab</option>
-                                <option value="Vaccine" <?= $data[0]['services'] == 'Vaccine' ? 'selected' : null ?>>Vaccine
-                                </option>
-                                <option value="Ultrasound" <?= $data[0]['services'] == 'Ultrasound' ? 'selected' : null ?>>
-                                    Ultrasound</option>
-                                <option value="Check" <?= $data[0]['services'] == 'Check' ? 'selected' : null ?>>Check
-                                </option>
-
-                            </select>
-                        </div>
+                        <script>
+                        $(document).ready(function() {
+                            $('#date').on('change', function() {
+                                $('#updated_date').val($(this).val());
+                            })
+                        })
+                        </script>
 
                         <div class="my-2 col-12 PX-0">
                             <small class="form-label fs-6 text-light" for="">Status</small>
                             <select class="form-select" name="status" id="status" required>
-                                <option value="Pending" <?= $data[0]['status'] == 'Pending' ? 'selected' : null ?>>Pending</option>
+                                <option value="Pending" <?= $data[0]['status'] == 'Pending' ? 'selected' : null ?>>
+                                    Pending</option>
                                 <option value="Cancelled" <?= $data[0]['status'] == 'Cancelled' ? 'selected' : null ?>>
                                     Cancelled</option>
-                                <option value="Approved" <?= $data[0]['status'] == 'Approved' ? 'selected' : null ?>>Approved
+                                <option value="Approved" <?= $data[0]['status'] == 'Approved' ? 'selected' : null ?>>
+                                    Approved
                                 </option>
                             </select>
                         </div>

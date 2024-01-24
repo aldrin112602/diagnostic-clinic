@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require 'vendor/autoload.php';
 
-function send_mail($email, $bodytemplate, $subject = 'Login Verification: Your One-Time Password (OTP)', $isattached = null) {
+function send_mail_2($email, $bodytemplate, $subject, $isattached = null) {
         $success = false;
         try {
             $mail = new PHPMailer( true );
