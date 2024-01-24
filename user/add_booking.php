@@ -200,7 +200,7 @@
                                 </body>
                             </html>';
                             if(send_mail($email, $body)) {
-                                ?>
+                                        ?>
                     <script>
                     $(document).ready(function() {
                         Swal.fire({
@@ -400,23 +400,203 @@
                     <form action="" method="POST" class="col-12 px-5 col-md-8 mx-auto">
                         <h2 class="text-light fw-bold">BOOKING</h2>
                         <div class="form-group">
-                            <label for="date">Date</label>
+                            <label class="text-white" for="date">Date</label>
                             <input type="date" class="form-control" name="date" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="services">Services</label>
-                            <select class="form-control" name="services" required>
-                                <option value="Select services">Select Services</option>
-                                <option value="OBY">OBY</option>
-                                <option value="Laboratory">Laboratory</option>
-                                <option value="Pedia">Pedia</option>
-                                <option value="Swab">Swab</option>
-                                <option value="Vaccine">vaccine</option>
-                                <option value="Ultrasound">Ultrasound</option>
-                                <option value="Check">Check</option>
+                            <label class="text-white" for="services">Services</label>
+                            <select class="form-control" name="services" id="services" required>
+                                <option value="" disabled selected class="d-none">-- select services --</option>
                             </select>
                         </div>
+
+                        <div class="form-group" id="optionsContainerParent">
+                            <label class="text-white" for="services">Select one below:</label>
+                            <section id="optionsContainer"></section>
+                        </div>
+                        <script>
+                        $(document).ready(function() {
+
+                            // services
+                            const services = ["XRAY PACKAGES", "SWAB and VACCINE", "OB-GYNE SONOLOGIST",
+                                "GENERAL ULTRASOUND"
+                            ];
+
+                            // Options per services
+                            const servicesOptions = {
+                                "GENERAL ULTRASOUND": [
+                                    "Whole Abdominal Ultrasound",
+                                    "Lower Abdominal Ultrasound",
+                                    "Upper Abdominal Ultrasound",
+                                    "Kidney/Renal Ultrasound",
+                                    "Prostate Ultrasound",
+                                    "Kidney w/ Prostate Ultrasound",
+                                    "Breast Ultrasound"
+                                ],
+                                "SWAB and VACCINE": [
+                                    "Antigen",
+                                    "Tetanus Toxoid",
+                                    "Flu Vaccine",
+                                    "Pneumonia Vaccine",
+                                    "Anti-Rabies per shot (Intradermal)",
+                                    "Anti-Rabies per shot (Intramuscular)"
+                                ],
+                                "OB-GYNE SONOLOGIST": [
+                                    "Pelvic Ultrasound",
+                                    "Biophysical Scoring",
+                                    "Transvaginal Ultrasound (1st Tri)",
+                                    "Pelvic w/ Cervical Length",
+                                    "Transvaginal Ultrasound (Gyne)",
+                                    "Transrectal Ultrasound (Gyne)",
+                                    "Transabdominal Ultrasound (Gyne)",
+                                    "Pelvic w/ OB Doppler",
+                                    "BPS w/ OB Doppler",
+                                    "BPS w/ Placental Doppler",
+                                    "Pelvic w/ Placental Doppler",
+                                    "Cervical Length",
+                                    "HSSG/SISH",
+                                    "3D Picture Only",
+                                    "4D Picture Only",
+                                    "Follicle Monitoring",
+                                    "Placental Localization/Vocalization",
+                                    "Transvaginal w/ Transabdominal Ultrasound (Gyne)",
+                                    "Congenital Anomaly Scan(SCAN)"
+                                ],
+
+                                "XRAY PACKAGES": {
+                                    "HEAD": [
+                                        "Skull",
+                                        "Water's View",
+                                        "Mastoid Series",
+                                        "Skull Series",
+                                        "Nasal Bone",
+                                        "Mandible",
+                                        "Paranasal Sinuses"
+                                    ],
+                                    "BODY": [
+                                        "Chest PA",
+                                        "Chest PA (Adult)",
+                                        "Chest PA (Pedia)",
+                                        "Apicolordotic",
+                                        "Thoracic Cage",
+                                        "Spot Film",
+                                        "Abdominal Xray 2View",
+                                        "T-Cage Oblique / AP",
+                                        "Chest PA / APL View"
+                                    ],
+                                    "SPINE": [
+                                        "Cervical APL",
+                                        "Thoracic APL",
+                                        "Lumbar APL",
+                                        "Pelvis AP",
+                                        "Cervico-Thoracic",
+                                        "Thoraco-Lumbar",
+                                        "Lumbo-Sacral",
+                                        "Thoraco-Lumbar-Sacrall",
+                                        "KUB X-ray",
+                                        "Cervical APL Oblique"
+                                    ],
+                                    "UPPER EXTREMITIES": [
+                                        "Shoulder AP",
+                                        "Shoulder Axillary View",
+                                        "Scapular View",
+                                        "Shoulder ex/int Rota",
+                                        "Humerous APL",
+                                        "Elbow APL",
+                                        "Wrist APL",
+                                        "Hand APO",
+                                        "Hip Joint AP",
+                                        "Inlet/Outlet",
+                                        "Femur APL",
+                                        "Knee APL",
+                                        "Sunrise View",
+                                        "Leg APL",
+                                        "Ankle Joint",
+                                        "Calcaneal View",
+                                        "Mortis View",
+                                        "Foot APO"
+                                    ]
+                                }
+
+                            };
+
+
+
+
+
+                            services.forEach(list => {
+                                const option = document.createElement('option');
+                                option.value = list
+                                option.innerHTML = list
+                                $('#services').append(option);
+
+                            })
+
+
+                            $('#optionsContainerParent').hide();
+                            $('#services').on('change', function() {
+                                $('#optionsContainerParent').show();
+                                // Empty optionsContainer first
+                                $('#optionsContainer').empty();
+
+                                const selectedService = $(this).val().trim();
+
+                                if ($(this).val() === "XRAY PACKAGES") {
+                                    Object.keys(servicesOptions[selectedService]).forEach((header, i) => {
+                                        $('#optionsContainer').append(
+                                            `<h4 class="text-white mt-4">(${header}): </h4>`);
+
+                                        // Loop through options per header
+                                        servicesOptions[selectedService][header]
+                                            .forEach((option, key) => {
+                                                // Create radio button per option
+                                                let radio = `
+                                                <input required class="form-check-input d-inline-block" type="radio" name="service" id="option_${key}${i}">
+                                                <label class="form-check-label text-white" for="option_${key}${i}">
+                                                        ${option}
+                                                </label>`;
+
+                                                let container = $('<div>', {
+                                                    class: "form-check"
+                                                }).append(radio);
+
+
+                                                $('#optionsContainer').append(container);
+                                            });
+
+                                    });
+                                    return;
+                                }
+
+
+
+                                // Check if the selected service exists in servicesOptions
+                                if (servicesOptions.hasOwnProperty(selectedService)) {
+                                    servicesOptions[selectedService].forEach((option, key) => {
+                                        // Create radio button per option
+                                        let radio = `
+                                        <input required class="form-check-input d-inline-block" type="radio" name="service" id="option_${key}">
+                                        <label class="form-check-label text-white" for="option_${key}">
+                                                ${option}
+                                        </label>`;
+
+                                        let container = $('<div>', {
+                                            class: "form-check"
+                                        }).append(radio);
+
+
+                                        $('#optionsContainer').append(container);
+                                    });
+
+                                } else {
+                                    console.error(
+                                        `Options not defined for service: ${selectedService}`);
+                                }
+                            });
+
+                        })
+                        </script>
                         <div class="my-2">
                             <button class="btn btn-primary btn-sm" type="submit">Book now</button>
                         </div>
