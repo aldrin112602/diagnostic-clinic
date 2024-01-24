@@ -1,0 +1,16 @@
+{
+  "name": "DIAGNOSTIC CLINIC",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "push": "git add . && git commit -m  Imissyou  && git push"
+  },
+  "keywords": [],
+  "author": {
+    "email": "caballeroaldrin02@gmail.com",
+    "name": "Aldrin Caballero",
+    "url": "https://github.com/aldrin112602"
+  },
+  "license": "ISC"
+}

@@ -1,0 +1,30 @@
+[ 2024-01-23 10:34:56 AM ][ aldrin123 ] -> Logged in successfully.
+[ 2024-01-23 10:36:32 AM ][ aldrin123 ] -> User logged out successfully.
+[ 2024-01-23 10:36:47 AM ][ aldrin123 ] -> Logged in successfully.
+[ 2024-01-23 10:38:48 AM ][ aldrin123 ] -> Profile updated successfully!
+[ 2024-01-23 10:39:37 AM ][ aldrin123 ] -> 2FA (ON) successfully!
+[ 2024-01-23 10:39:42 AM ][ aldrin123 ] -> User logged out successfully.
+[ 2024-01-23 10:39:54 AM ][ aldrin123 ] -> Successfully send OTP for login security.
+[ 2024-01-23 10:40:51 AM ][ aldrin123 ] -> User  successfully validate OTP for Login authentication.
+[ 2024-01-23 10:40:51 AM ][ aldrin123 ] -> Logged in successfully.
+[ 2024-01-23 10:41:02 AM ][ aldrin123 ] -> 2FA (ON) successfully!
+[ 2024-01-23 10:41:05 AM ][ aldrin123 ] -> 2FA (OFF) successfully!
+[ 2024-01-23 10:41:48 AM ][ aldrin123 ] -> Bug reported successfully.
+[ 2024-01-23 10:42:51 AM ][ aldrin123 ] -> User logged out successfully.
+[ 2024-01-23 10:44:50 AM ][ user123 ] -> Logged in successfully.
+[ 2024-01-23 10:47:10 AM ][ aldrin123 ] -> Logged in successfully.
+[ 2024-01-23 10:47:42 AM ][ user123 ] -> Profile updated successfully!
+[ 2024-01-23 10:49:34 AM ][ user123 ] -> 2FA (ON) successfully!
+[ 2024-01-23 10:49:57 AM ][ user123 ] -> User logged out successfully.
+[ 2024-01-23 10:53:36 AM ][ aldrin123 ] -> Password reset successfully!
+[ 2024-01-23 10:53:51 AM ][ aldrin123 ] -> Logged in successfully.
+[ 2024-01-23 10:58:12 AM ][ aldrin123 ] -> User logged out successfully.
+[ 2024-01-23 11:04:58 AM ][  ] -> User logged out successfully.
+[ 2024-01-23 11:07:27 AM ][ user123 ] -> Password reset successfully!
+[ 2024-01-23 11:07:59 AM ][ user123 ] -> Successfully send OTP for login security.
+[ 2024-01-23 11:08:15 AM ][ user123 ] -> User  successfully validate OTP for Login authentication.
+[ 2024-01-23 11:08:15 AM ][ user123 ] -> Logged in successfully.
+[ 2024-01-23 11:09:42 AM ][ user123 ] -> 2FA (OFF) successfully!
+[ 2024-01-23 11:10:34 AM ][ user123 ] -> User logged out successfully.
+[ 2024-01-23 11:16:46 AM ][ aldrin123 ] -> Logged in successfully.
+[ 2024-01-23 11:22:57 AM ][ aldrin123 ] -> User logged out successfully.
