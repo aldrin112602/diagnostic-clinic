@@ -40,6 +40,7 @@ $queryCreateTable = "CREATE TABLE IF NOT EXISTS booking (
     username VARCHAR(255) NOT NULL,
     date DATE NOT NULL,
     services VARCHAR(255) NOT NULL,
+    service_type VARCHAR(255) NOT NULL,
     status VARCHAR(50) DEFAULT 'Pending' NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";

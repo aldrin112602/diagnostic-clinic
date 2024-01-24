@@ -10,9 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_SESSION['username'];
     $date = $post['date'];
     $services = $post['services'];
+    $service_type = $post['service_type'];
     
 
-    $queryInsert = "INSERT INTO booking (username, date, services) VALUES ('$username', '$date', '$services')";
+    $queryInsert = "INSERT INTO booking (username, date, service_type, services) VALUES ('$username', '$date', '$service_type', '$services')";
 
     if ($conn->query($queryInsert)) {
         $success_msg = "Booking successfully created!";

@@ -307,6 +307,7 @@
                                             <tr>
                                                 <th>ID</th>
                                                 <th>Date</th>
+                                                <th>Service type</th>
                                                 <th>Services</th>
                                                 <th>Status</th>
                                                 <th>Actions</th>
@@ -318,6 +319,7 @@
                                                 echo "<tr>
                                                     <td>{$row['id']}</td>
                                                     <td>{$row['date']}</td>
+                                                    <td>{$row['service_type']}</td>
                                                     <td>{$row['services']}</td>
                                                     <td>{$row['status']}</td>
                                                     <td>";
@@ -406,13 +408,13 @@
 
                         <div class="form-group">
                             <label class="text-white" for="services">Services</label>
-                            <select class="form-control" name="services" id="services" required>
+                            <select name="service_type" class="form-control" id="services" required>
                                 <option value="" disabled selected class="d-none">-- select services --</option>
                             </select>
                         </div>
 
                         <div class="form-group" id="optionsContainerParent">
-                            <label class="text-white" for="services">Select one below:</label>
+                            <label class="text-white" for="">Select one below:</label>
                             <section id="optionsContainer"></section>
                         </div>
                         <script>
@@ -552,7 +554,7 @@
                                             .forEach((option, key) => {
                                                 // Create radio button per option
                                                 let radio = `
-                                                <input required class="form-check-input d-inline-block" type="radio" name="service" id="option_${key}${i}">
+                                                <input required class="form-check-input d-inline-block" type="radio" name="services" id="option_${key}${i}" value="${option}">
                                                 <label class="form-check-label text-white" for="option_${key}${i}">
                                                         ${option}
                                                 </label>`;
@@ -576,7 +578,7 @@
                                     servicesOptions[selectedService].forEach((option, key) => {
                                         // Create radio button per option
                                         let radio = `
-                                        <input required class="form-check-input d-inline-block" type="radio" name="service" id="option_${key}">
+                                        <input required class="form-check-input d-inline-block" type="radio" name="services" id="option_${key}" value="${option}">
                                         <label class="form-check-label text-white" for="option_${key}">
                                                 ${option}
                                         </label>`;
