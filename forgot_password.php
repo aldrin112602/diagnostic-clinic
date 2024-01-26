@@ -34,14 +34,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['email'])) {
                         <p>Dear ' . $row['email'] . ',</p>
                         <p>We received a reset verification code request for your account. If you did not initiate this request, please ignore this email, please enter the following verification code:</p>
                         <h2 style="text-align:center; font-size:32px;">' . $token . '</h2>
-                        <p>This code is valid for <b>10 minutes</b>, so please enter it as soon as possible.</p>
+                        <p>This code is valid for <b>2 minutes</b>, so please enter it as soon as possible.</p>
                         <p>If you have any trouble entering the code, please don\'t hesitate to contact us at <a href="mailto:cabaleroaldrin02@gmail.com">cabaleroaldrin02@gmail.com</a>.</p>
                     </body>
                 </html>';
             if (send_mail($row['email'], $body, 'Reset Password Verification (DIAGNOSTIC CLINIC)')) {
                 $_SESSION['reset_verification'] = $token;
                 $_SESSION['start'] = time();
-                $_SESSION['expire'] = $_SESSION['start'] + (10 * 60);
+                $_SESSION['expire'] = $_SESSION['start'] + (2 * 60);
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['uname'] = $row['username'];
             } else {

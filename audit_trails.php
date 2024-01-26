@@ -5,4 +5,4 @@ function logUser($username, $message) {
     $logEntry = "[ $dateAndTime ][ $username ] -> $message";
     file_put_contents('audit_log.txt', $logEntry . PHP_EOL, FILE_APPEND);
 }
-?>
+
