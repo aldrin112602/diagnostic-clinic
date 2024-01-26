@@ -288,15 +288,15 @@
                     <h1 class="text-light">Welcome <?php echo $_SESSION['username'] ?></h1>
                     <h4 class="text-light">GOOD MORNING!</h4>
                     <h4 class="text-light">Thanks for choosing DIAGNOSTIC CLINIC</h4>
-                    <h3 class="fw-bold mt-5 text-light">Frequintly ask Questions</h3>
+                    <h3 class="fw-bold mt-5 text-light">Frequintly Ask Questions</h3>
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <div class="card">
+                            <div class="bg-transparent border-0">
                                 <div class="card-body">
-                                    <div class="accordion" id="accordionExample">
+                                    <div class="accordion p-0" id="accordionExample">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button collapsed" type="button"
+                                                <button class="accordion-button p-2 collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseOne"
                                                     aria-expanded="false" aria-controls="collapseOne">
                                                     What is DIAGNOSTIC CLINIC?
@@ -319,12 +319,12 @@
                         </div>
 
                         <div class="col-12 col-md-6">
-                            <div class="card">
+                            <div class="bg-transparent border-0">
                                 <div class="card-body">
                                     <div class="accordion" id="accordionExample">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingTwo">
-                                                <button class="accordion-button collapsed" type="button"
+                                                <button class="accordion-button collapsed  p-2" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                                     aria-expanded="false" aria-controls="collapseTwo">
                                                     How do I create an account?
@@ -345,12 +345,12 @@
                         </div>
 
                         <div class="col-12 col-md-6">
-                            <div class="card">
+                            <div class="bg-transparent border-0">
                                 <div class="card-body">
                                     <div class="accordion" id="accordionExample">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingThree">
-                                                <button class="accordion-button collapsed" type="button"
+                                                <button class="accordion-button collapsed  p-2" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                                     aria-expanded="false" aria-controls="collapseThree">
                                                     How do I login to my account?
@@ -373,12 +373,12 @@
 
 
                         <div class="col-12 col-md-6">
-                            <div class="card">
+                            <div class="bg-transparent border-0">
                                 <div class="card-body">
                                     <div class="accordion" id="accordionExample">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingFour">
-                                                <button class="accordion-button collapsed" type="button"
+                                                <button class="accordion-button collapsed  p-2" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseFour"
                                                     aria-expanded="false" aria-controls="collapseFour">
                                                     How do I manage my account?
@@ -407,12 +407,12 @@
                         </div>
 
                         <div class="col-12 col-md-6">
-                            <div class="card">
+                            <div class="bg-transparent border-0">
                                 <div class="card-body">
                                     <div class="accordion" id="accordionExample">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingFive">
-                                                <button class="accordion-button collapsed" type="button"
+                                                <button class="accordion-button collapsed  p-2" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseFive"
                                                     aria-expanded="false" aria-controls="collapseFive">
                                                     What services offer?
@@ -438,12 +438,12 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
-                            <div class="card">
+                            <div class="bg-transparent border-0">
                                 <div class="card-body">
                                     <div class="accordion" id="accordionExample">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingSix">
-                                                <button class="accordion-button collapsed" type="button"
+                                                <button class="accordion-button collapsed  p-2" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseSix"
                                                     aria-expanded="false" aria-controls="collapseSix">
                                                     How do I use DIAGNOSTIC CLINIC?
