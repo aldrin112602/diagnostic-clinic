@@ -66,6 +66,8 @@ img{
     
 }
 
+
+
 @media screen and (max-width: 960px){
     .navbox{
         display: flex;
@@ -304,7 +306,7 @@ p{
 @media screen and (max-width: 600px){
     .service_con{    
        margin: 20px 0;
-       width: 30%;
+       width: 40%;
     }
     .services h1{
         line-height: 1;
