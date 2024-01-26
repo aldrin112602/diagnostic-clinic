@@ -1,5 +1,0 @@
-[ 2024-01-26 12:23:28 PM ][ user123 ] -> Logged in successfully.
-[ 2024-01-26 12:23:43 PM ][ user123 ] -> 2FA (ON) successfully!
-[ 2024-01-26 12:25:45 PM ][ user123 ] -> 2FA (ON) successfully!
-[ 2024-01-26 12:25:51 PM ][ user123 ] -> User logged out successfully.
-[ 2024-01-26 12:26:07 PM ][ user123 ] -> Successfully send OTP for login security.
